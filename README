@@ -1,10 +1,7 @@
 HTTP-Cookies-ChromeMacOS
 
-A README file is required for CPAN modules since CPAN extracts the README
-file from a module distribution so that people browsing the archive
-can use it to get an idea of the module's uses. It is usually a good idea
-to provide version information here so that people can decide whether
-fixes for the module are worth downloading.
+
+感谢 fayland 修正bug
 
 
 INSTALLATION
