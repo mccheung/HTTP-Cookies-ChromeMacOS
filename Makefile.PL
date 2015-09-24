@@ -21,6 +21,7 @@ WriteMakefile(
       DBI => 0,
       "PBKDF2::Tiny" => 0,
       "Crypt::CBC" => 0,
+      'Crypt::OpenSSL::AES' => 0,
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'HTTP-Cookies-ChromeMacOS-*' },

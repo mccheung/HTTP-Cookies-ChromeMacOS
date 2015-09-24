@@ -133,9 +133,8 @@ sub load {
     -literal_key => 1,
   );
 
-
   foreach my $row ( @{ $self->_get_rows( $file, $domain ) } ) {
-    my $value = $row->value || $row->encrypted_value;
+    my $value = $row->value || $row->encrypted_value || '';
     if ( $value =~ /^v10/ ) {
       $value =~ s/^v10//;
       $value = $cipher->decrypt( $value );
@@ -150,7 +149,7 @@ sub load {
       undef,
       undef,
       $row->secure,
-      ($row->expires_utc / 1_000_000) - gmtime,
+      time() + 86400, # never expires for readonly
       0,
       {}
     );
